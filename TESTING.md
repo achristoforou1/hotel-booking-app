@@ -3,8 +3,6 @@
 ## Overview
 This file documents the manual and automated testing carried out on the **Hotel Booking App** to ensure that all components function as intended and meet the project assessment criteria.
 
----
-
 ## 1. Form Testing
 
 **Form:** `BookingForm`  
@@ -15,8 +13,6 @@ This file documents the manual and automated testing carried out on the **Hotel 
 **Tools Used:** Django `TestCase`  
 **Location:** `booking/tests.py`
 
----
-
 ## 2. Model Testing
 
 **Model:** `Booking`  
@@ -26,8 +22,6 @@ This file documents the manual and automated testing carried out on the **Hotel 
 
 **Tools Used:** Django `TestCase`  
 **Location:** `booking/tests.py`
-
----
 
 ## 3. View Testing
 
@@ -43,30 +37,35 @@ This file documents the manual and automated testing carried out on the **Hotel 
 **Tools Used:** Django `TestCase`  
 **Location:** `booking/tests.py`
 
----
-
 ## 4. Admin Panel
 
 - Admin panel is set up and accessible.
 - `Booking` model appears in the admin panel.
 - Booking entries can be viewed, added, and deleted.
 
----
-
 ## 5. Manual Front-End Testing
+
+**Homepage**
+- Loads without error.
+- Displays welcome message and “Make a Booking” link.
 
 **Booking Form Page**
 - Loads correctly in browser.
-- Form input validation triggers on empty required fields.
-- Submission redirects to success page.
+- Form validation works for required fields and date logic (e.g., check-out after check-in).
+- Submits successfully and redirects.
 
 **Success Page**
-- Displays confirmation message.
+- Displays confirmation message after booking.
 
 **Admin Panel**
 - Verified booking entries appear after submission.
 
----
+**My Bookings Page**
+- Displays only the currently logged-in user’s bookings.
+
+**Edit/Delete Pages**
+- Only accessible when logged in and only for that user's booking.
+- Redirect or error shown if trying to access someone else’s.
 
 ## 6. Testing Tools
 
@@ -76,10 +75,55 @@ This file documents the manual and automated testing carried out on the **Hotel 
 - Browser: Chrome (latest)  
 - Manual testing and `python manage.py test`
 
----
-
 ## 7. Summary
 
 All critical components have been tested both manually and using Django’s built-in testing tools. The system behaves as expected across form validation, data handling, and user interaction routes.
+
+## 8. User Authentication
+
+**Registration**
+- Visit `/accounts/signup/` and register a new user.
+- Required fields must be filled in, and submission redirects to homepage.
+
+**Login**
+- Visit `/accounts/login/`, enter valid credentials, and confirm successful login.
+
+**Logout**
+- Click logout and confirm redirection to login page.
+
+**Access Restrictions**
+- Attempt to access `/book/`, `/my-bookings/`, `/edit/.../`, or `/delete/.../` without being logged in.
+- Confirm redirection to login page as expected.
+
+## 9. Booking CRUD Manual Testing
+
+**Create Booking**
+- Navigate to `/book/`, fill in and submit the form.
+- Confirm redirect to success page and entry appears in admin panel.
+
+**Read Bookings**
+- Visit `/my-bookings/` while logged in.
+- Confirm the list shows only that user's bookings.
+
+**Update Booking**
+- Click “Edit” on a booking from `/my-bookings/`.
+- Submit updated data and verify changes are saved.
+
+**Delete Booking**
+- Click “Delete” on a booking from `/my-bookings/`.
+- Confirm deletion and redirection to updated bookings list.
+
+## 10. Custom Validation
+
+**Check-out Before Check-in**
+- Submit form with check-out earlier than check-in.
+- Confirm appropriate error message appears.
+
+## 11. Summary
+
+All key features — authentication, booking creation and management, and validation — have been thoroughly tested. Testing was performed manually and programmatically using Django's test suite.
+
+The system is stable, secure, and ready for final deployment.
+
 
 **Ready for deployment.**
