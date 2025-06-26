@@ -7,6 +7,8 @@ from .models import Booking
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'home.html')
 
 @login_required
 def booking_view(request):
