@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = '__all__'
+        exclude = ['user']  # Don't show the user field in the form
 
     def clean(self):
         cleaned_data = super().clean()
