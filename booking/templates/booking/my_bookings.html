@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>My Bookings</h2>
+  {% for booking in bookings %}
+    <p><strong>{{ booking.full_name }}</strong><br>
+       Room: {{ booking.room_type }}<br>
+       From: {{ booking.check_in }} to {{ booking.check_out }}</p>
+
+    <a href="{% url 'edit_booking' booking.id %}">Edit</a> |
+    <a href="{% url 'delete_booking' booking.id %}">Delete</a>
+    <hr>
+  {% empty %}
+    <p>You have no bookings yet.</p>
+  {% endfor %}
+{% endblock %}
