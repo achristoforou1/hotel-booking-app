@@ -1,6 +1,7 @@
 from django.test import TestCase
 from booking.forms import BookingForm
 from booking.models import Booking
+from django.urls import reverse
 from datetime import date
 
 # Create your tests here.
@@ -48,3 +49,29 @@ class BookingModelTest(TestCase):
     def test_booking_fields(self):
         self.assertEqual(self.booking.room_type, "double")
         self.assertEqual(self.booking.check_in, date(2025, 7, 1))
+
+# View testing
+
+class TestBookingViews(TestCase):
+
+    def test_booking_view_get(self):
+        response = self.client.get(reverse('booking'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'booking/booking_form.html')
+
+    def test_booking_view_post_success(self):
+        form_data = {
+            'full_name': 'Alice Smith',
+            'email': 'alice@example.com',
+            'room_type': 'double',
+            'check_in': date.today(),
+            'check_out': date.today(),
+            'special_requests': 'Late check-in',
+        }
+        response = self.client.post(reverse('booking'), data=form_data)
+        self.assertRedirects(response, reverse('booking_success'))
+
+    def test_booking_success_view(self):
+        response = self.client.get(reverse('booking_success'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'booking/booking_success.html')
