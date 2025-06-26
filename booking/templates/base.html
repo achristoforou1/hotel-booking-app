@@ -7,6 +7,21 @@
 <body>
   <header>
     <h1>Hotel Booking</h1>
+    <nav>
+      {% if user.is_authenticated %}
+        <a href="{% url 'booking_form' %}">Book a Room</a> |
+        <a href="{% url 'my_bookings' %}">My Bookings</a> |
+        <form method="post" action="{% url 'account_logout' %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer;">
+                Logout
+            </button>
+        </form>
+      {% else %}
+        <a href="{% url 'account_login' %}">Login</a> |
+        <a href="{% url 'account_signup' %}">Sign Up</a>
+      {% endif %}
+    </nav>
     <hr>
   </header>
 
