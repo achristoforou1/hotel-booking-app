@@ -130,18 +130,18 @@ The system is stable, secure, and ready for final deployment.
 | Feature                        | Status | Notes |
 |-------------------------------|--------|-------|
 | Home page loads correctly     | OK     | Welcome message and link visible |
-| User registration             | ✅     | New user can sign up via allauth |
-| User login/logout             | ✅     | Login redirects correctly; logout returns to login page |
-| Booking form submission       | ✅     | Form submits successfully with valid data |
-| Invalid form handling         | ✅     | Errors shown for missing or incorrect data |
-| Date validation (check-in/out)| ✅     | Error shown when check-out is before check-in |
-| View my bookings              | ✅     | Only shows bookings for logged-in user |
-| Edit my booking               | ✅     | Booking updates saved and reflected |
-| Delete my booking             | ✅     | Booking removed and list updated |
-| Access restriction (unauth)   | ✅     | Redirects to login if user not authenticated |
-| Prevent editing others' data  | ✅     | Users cannot edit or delete others' bookings |
-| Admin panel access            | ✅     | Booking model editable in admin |
-| Responsive layout             | ✅     | Pages display correctly on desktop and mobile |
+| User registration             | OK     | New user can sign up via allauth |
+| User login/logout             | OK     | Login redirects correctly; logout returns to login page |
+| Booking form submission       | OK     | Form submits successfully with valid data |
+| Invalid form handling         | OK    | Errors shown for missing or incorrect data |
+| Date validation (check-in/out)| OK     | Error shown when check-out is before check-in |
+| View my bookings              | OK     | Only shows bookings for logged-in user |
+| Edit my booking               | OK   | Booking updates saved and reflected |
+| Delete my booking             | OK     | Booking removed and list updated |
+| Access restriction (unauth)   | OK     | Redirects to login if user not authenticated |
+| Prevent editing others' data  | OK     | Users cannot edit or delete others' bookings |
+| Admin panel access            | OK     | Booking model editable in admin |
+| Responsive layout             | OK     | Pages display correctly on desktop and mobile |
 
 
 
