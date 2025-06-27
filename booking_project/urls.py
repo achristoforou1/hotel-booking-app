@@ -20,7 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),  # ✅ this must be ABOVE the booking app
+    path('accounts/', include('booking.account_urls')),  # custom routing
     path('', include('booking.urls')),
 ]
 
