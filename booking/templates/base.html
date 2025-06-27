@@ -140,6 +140,18 @@
   </header>
 
   <main>
+    {% if user.is_authenticated %}
+        <p style="text-align: center; color: #222;">Logged in as {{ user.username }}</p>
+    {% endif %}
+
+    {% if messages %}
+        <div style="text-align: center; margin: 10px auto; color: #0055ff;">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
     {% block content %}
     {% endblock %}
   </main>
