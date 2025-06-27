@@ -18,7 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),  # ✅ this must be ABOVE the booking app
     path('', include('booking.urls')),
-    path('accounts/', include('allauth.urls')),  # enables login/logout
 ]
+
+
