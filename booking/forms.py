@@ -6,6 +6,10 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         exclude = ['user']  # Don't show the user field in the form
+        widgets = {
+            'check_in': forms.DateInput(attrs={'type': 'date'}),
+            'check_out': forms.DateInput(attrs={'type': 'date'}),
+        }
 
     def clean(self):
         cleaned_data = super().clean()
