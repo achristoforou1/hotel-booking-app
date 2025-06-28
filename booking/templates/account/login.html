@@ -16,6 +16,6 @@
 
   <p style="text-align: center;">
     Don't have an account? <a href="{% url 'account_signup' %}">Sign up</a><br>
-    <a href="/accounts/password/reset/">Forgot your password?</a>
+    <a href="{% url 'account_reset_password' %}">Forgot your password?</a>
   </p>
 {% endblock %}
