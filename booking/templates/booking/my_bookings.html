@@ -2,7 +2,8 @@
 
 {% block content %}
   <div style="color: white; text-align: center; padding: 2rem;">
-    <h2>My Bookings</h2>
+    <h2 style="color: black;">My Bookings</h2>
+
     {% for booking in bookings %}
       <p><strong>{{ booking.full_name }}</strong><br>
          Room: {{ booking.room_type }}<br>
