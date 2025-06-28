@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div style="color: white; text-align: center; padding: 2rem;">
-    <h2 style="color: black;">My Bookings</h2>
+    <div style="color: black; text-align: center; padding: 2rem;">
+    <h2>My Bookings</h2>
 
     {% for booking in bookings %}
       <p><strong>{{ booking.full_name }}</strong><br>
@@ -13,7 +13,7 @@
       <a href="{% url 'delete_booking' booking.id %}">Delete</a>
       <hr>
     {% empty %}
-      <p style="color: black;">You have no bookings yet.</p>
+      <p>You have no bookings yet.</p>
     {% endfor %}
   </div>
 {% endblock %}
