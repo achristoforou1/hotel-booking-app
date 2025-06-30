@@ -17,4 +17,8 @@ class BookingForm(forms.ModelForm):
         check_out = cleaned_data.get('check_out')
 
         if check_in and check_out and check_out <= check_in:
-            raise ValidationError("WARNING: Check-out date MUST be after check-in date.")
+            self.add_error(
+                None,  
+                ValidationError("WARNING: Check-out date MUST be after check-in date.")
+            )
+            
