@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Delete Booking</h2>
-  <p>Are you sure you want to delete your booking for <strong>{{ booking.room_type }}</strong> from {{ booking.check_in }} to {{ booking.check_out }}?</p>
-  
-  <form method="post">
-    {% csrf_token %}
-    <button type="submit">Yes, delete it</button>
-    <a href="{% url 'my_bookings' %}">No, go back</a>
-  </form>
+  <div style="color: black; text-align: center; padding: 2rem;">
+    <h2>Delete Booking</h2>
+    <p>Are you sure you want to delete your booking for <strong>{{ booking.room_type }}</strong> from {{ booking.check_in }} to {{ booking.check_out }}?</p>
+    
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Yes, delete it</button>
+      <a href="{% url 'my_bookings' %}">No, go back</a>
+    </form>
+  </div>
 {% endblock %}
