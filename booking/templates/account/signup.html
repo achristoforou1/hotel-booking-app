@@ -24,12 +24,16 @@
       <p>
         <label for="id_password1">Password:</label>
         {{ form.password1 }}
+        {% if form.password1.help_text %}
+          <small id="id_password1_helptext">{{ form.password1.help_text }}</small>
+        {% endif %}
       </p>
 
       <p>
         <label for="id_password2">Confirm Password:</label>
         {{ form.password2 }}
       </p>
+
 
       <button type="submit">Sign Up</button>
     </form>
