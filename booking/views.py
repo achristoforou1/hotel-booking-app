@@ -1,11 +1,8 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
-from django.shortcuts import get_object_or_404
-
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BookingForm
 from .models import Booking
 
-# Create your views here.
 
 def home(request):
     """
@@ -14,6 +11,7 @@ def home(request):
     template: `home.html`
     """
     return render(request, 'home.html')
+
 
 @login_required
 def booking_view(request):
@@ -37,8 +35,9 @@ def booking_view(request):
             return redirect('booking_success')
     else:
         form = BookingForm()
-    
+
     return render(request, 'booking/booking_form.html', {'form': form})
+
 
 @login_required
 def my_bookings(request):
@@ -54,6 +53,7 @@ def my_bookings(request):
     """
     bookings = Booking.objects.filter(user=request.user)
     return render(request, 'booking/my_bookings.html', {'bookings': bookings})
+
 
 @login_required
 def edit_booking(request, booking_id):
@@ -76,7 +76,9 @@ def edit_booking(request, booking_id):
             return redirect('my_bookings')
     else:
         form = BookingForm(instance=booking)
+
     return render(request, 'booking/edit_booking.html', {'form': form})
+
 
 @login_required
 def delete_booking(request, booking_id):
@@ -94,7 +96,9 @@ def delete_booking(request, booking_id):
     if request.method == 'POST':
         booking.delete()
         return redirect('my_bookings')
+
     return render(request, 'booking/delete_booking.html', {'booking': booking})
+
 
 def booking_success(request):
     """
@@ -103,4 +107,3 @@ def booking_success(request):
     template: `booking/booking_success.html`
     """
     return render(request, 'booking/booking_success.html')
-

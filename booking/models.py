@@ -9,7 +9,6 @@ ROOM_CHOICES = [
     ('suite', 'Suite'),
 ]
 
-# Create your models here.
 
 class Booking(models.Model):
     """

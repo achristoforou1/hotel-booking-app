@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Booking
 
-# Register your models here.
+
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
     """
@@ -19,4 +19,4 @@ class BookingAdmin(admin.ModelAdmin):
     - email
     """
     list_display = ('full_name', 'email', 'room_type', 'check_in', 'check_out')
-    search_fields = ('full_name', 'email')  
+    search_fields = ('full_name', 'email')

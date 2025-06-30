@@ -1,6 +1,7 @@
 from django import forms
 from .models import Booking
 
+
 class BookingForm(forms.ModelForm):
     """
     form: BookingForm
@@ -32,6 +33,6 @@ class BookingForm(forms.ModelForm):
 
         if check_in and check_out and check_out <= check_in:
             self.add_error(
-                None,  
-                "WARNING: Check-out date MUST be after check-in date." 
+                None,
+                "WARNING: Check-out date MUST be after check-in date."
             )

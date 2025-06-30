@@ -4,7 +4,6 @@ from booking.models import Booking
 from django.urls import reverse
 from datetime import date
 
-# Create your tests here.
 
 # Form Tests
 class TestBookingForm(TestCase):
@@ -30,6 +29,7 @@ class TestBookingForm(TestCase):
         self.assertIn('full_name', form.errors)
         self.assertIn('room_type', form.errors)
 
+
 # Model Tests
 class BookingModelTest(TestCase):
 
@@ -50,8 +50,8 @@ class BookingModelTest(TestCase):
         self.assertEqual(self.booking.room_type, "double")
         self.assertEqual(self.booking.check_in, date(2025, 7, 1))
 
-# View testing
 
+# View testing
 class TestBookingViews(TestCase):
 
     def test_booking_view_get(self):
