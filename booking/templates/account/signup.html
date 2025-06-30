@@ -10,7 +10,27 @@
 
     <form method="POST" style="max-width: 400px; margin: auto;">
       {% csrf_token %}
-      {{ form.as_p }}
+
+      <p>
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+      </p>
+
+      <p>
+        <label for="id_username">Username:</label>
+        {{ form.username }}
+      </p>
+
+      <p>
+        <label for="id_password1">Password:</label>
+        {{ form.password1 }}
+      </p>
+
+      <p>
+        <label for="id_password2">Confirm Password:</label>
+        {{ form.password2 }}
+      </p>
+
       <button type="submit">Sign Up</button>
     </form>
 
