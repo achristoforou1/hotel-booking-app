@@ -8,7 +8,7 @@ The app is ideal for travellers who want to check availability and secure their 
 
 ### Website across all screen sizes
 
-![Responsive Mockup](/assets\images\responsively_bella_vista.png)
+![Responsive preview on all different screen sizes](\assets\images\responsively_bella_vista.png)
 
 ---
 
