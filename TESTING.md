@@ -143,6 +143,29 @@ The system is stable, secure, and ready for final deployment.
 | Admin panel access            | OK     | Booking model editable in admin |
 | Responsive layout             | OK     | Pages display correctly on desktop and mobile |
 
+## 13. Additional Manual Testing Cases
+
+**Manual test cases for authentication, booking flow, and error handling**
+
+| **Test Case**                             | **Status** | **Notes**                                                |
+| ----------------------------------------- | ---------- | -------------------------------------------------------- |
+| Open the Homepage                         | OK         | Loads correctly with background image and welcome text   |
+| Register a user with valid data           | OK         | Successfully signs up and redirects to home              |
+| Register a user with invalid data         | OK         | Validation errors shown on form                          |
+| Login a user with valid data              | OK         | Logs in and displays user-specific links                 |
+| Login a user with invalid data            | OK         | Form reloads with appropriate error                      |
+| Logout a user                             | OK         | Redirects to login screen                                |
+| Can view My Bookings                      | OK         | Logged-in user sees only their bookings                  |
+| Create a booking with valid data          | OK         | Redirects to success page and appears in admin           |
+| Create a booking with invalid data        | OK         | Form reloads with error messages                         |
+| Booking date validation                   | OK         | Error shown if check-out is before check-in              |
+| Edit a booking                            | OK         | Updates are saved and shown correctly                    |
+| Delete a booking                          | OK         | Booking removed and list updates                         |
+| Attempt to view/edit others’ bookings     | OK         | Access blocked; no data exposed                          |
+| Access booking pages without login        | OK         | Redirects to login page as expected                      |
+| Password reset form loads                 | OK         | Page renders correctly                                   |
+| Password reset submission (bug)           | ❌ FAIL     | Submission returns 500 error (known issue)               |
+| Responsive layout (desktop/mobile/tablet) | OK         | Tested using Responsively and confirmed with screenshots |
 
 
 
