@@ -1,5 +1,4 @@
 from django import forms
-from django.core.exceptions import ValidationError
 from .models import Booking
 
 class BookingForm(forms.ModelForm):
@@ -19,6 +18,5 @@ class BookingForm(forms.ModelForm):
         if check_in and check_out and check_out <= check_in:
             self.add_error(
                 None,  
-                ValidationError("WARNING: Check-out date MUST be after check-in date.")
+                "WARNING: Check-out date MUST be after check-in date."  # ✅ Plain string
             )
-            
