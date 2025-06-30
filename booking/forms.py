@@ -2,6 +2,21 @@ from django import forms
 from .models import Booking
 
 class BookingForm(forms.ModelForm):
+    """
+    form: BookingForm
+
+    Handles user input for creating and editing room bookings.
+
+    Fields:
+    - room_type: Dropdown for selecting room type
+    - check_in: Date field for the check-in date
+    - check_out: Date field for the check-out date
+    - special_requests: Optional text input for any special needs
+
+    Validation:
+    - Ensures check-out date is after check-in date
+    """
+
     class Meta:
         model = Booking
         fields = ['room_type', 'check_in', 'check_out', 'special_requests']
