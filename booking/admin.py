@@ -13,5 +13,10 @@ class BookingAdmin(admin.ModelAdmin):
     - room_type
     - check_in
     - check_out
+
+    Enables admin search functionality by:
+    - full_name
+    - email
     """
     list_display = ('full_name', 'email', 'room_type', 'check_in', 'check_out')
+    search_fields = ('full_name', 'email')  
