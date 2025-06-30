@@ -12,7 +12,31 @@
 
     <form method="post">
       {% csrf_token %}
-      {{ form.as_p }}
+
+      <div style="margin-bottom: 1rem;">
+        {{ form.room_type.label_tag }}<br>
+        {{ form.room_type }}
+        {{ form.room_type.errors }}
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        {{ form.check_in.label_tag }}<br>
+        {{ form.check_in }}
+        {{ form.check_in.errors }}
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        {{ form.check_out.label_tag }}<br>
+        {{ form.check_out }}
+        {{ form.check_out.errors }}
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        {{ form.special_requests.label_tag }}<br>
+        {{ form.special_requests }}
+        {{ form.special_requests.errors }}
+      </div>
+
       <button type="submit">Save Changes</button>
       <a href="{% url 'my_bookings' %}">Cancel</a>
     </form>
