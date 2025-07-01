@@ -6,7 +6,7 @@ The app is ideal for travellers who want to check availability and secure their 
 
 The live link can be found here - https://hotel-booking-app-anthony-310db2860612.herokuapp.com/
 
-## Responsively App
+## Responsive Layout
 
 ### Website across all screen sizes
 
@@ -223,6 +223,7 @@ The live application can be accessed at:
    ```bash
    heroku run python manage.py migrate
    heroku run python manage.py createsuperuser
+   ```
 
 ---
 
@@ -231,6 +232,8 @@ The live application can be accessed at:
 The following ERD represents the relationship between users and their bookings in the Bella Vista hotel app:
 
 ![ERD Diagram](assets/images/erd_diagram.png)
+This diagram was created using [dbdiagram.io](https://dbdiagram.io).
+
 
 ## Credits
 
@@ -240,7 +243,8 @@ The following ERD represents the relationship between users and their bookings i
 - **Responsively App** – Used to capture responsive layout previews across devices.
 - **W3C Validator** – Used to verify HTML and CSS compliance.
 - **pep8ci.herokuapp.com** – Used for Python PEP8 code validation.
-- **My mentor, Moritz Wach** – For insightful guidance and support throughout the project, especially during initial layout ideas, debugging and validation.
+- **dbdiagram.io** – Used to design and visualize the Entity Relationship Diagram.
+- **Mentor, Moritz Wach** – For insightful guidance and support throughout the project, especially during initial layout ideas, debugging and validation.
 - **Stack Overflow & Django Docs** – For code snippets, troubleshooting, and documentation references during development.
 - **Pexels Images** – For the background image used in the site design (https://www.pexels.com/photo/palm-trees-at-night-258154/).
 - **YouTube Tutorials** – Various videos were consulted to assist with debugging Django issues, configuring PostgreSQL, and setting up the Heroku deployment pipeline.
