@@ -130,7 +130,7 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_LOGIN_METHODS = {'username'}
+ACCOUNT_LOGIN_METHODS = 'username'
 ACCOUNT_SIGNUP_FIELDS = [
     'email*', 'username*', 'password1*', 'password2*'
 ]
