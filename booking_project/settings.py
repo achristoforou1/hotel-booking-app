@@ -23,11 +23,12 @@ SECRET_KEY = (
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'hotel-booking-app-anthony-310db2860612.herokuapp.com',
-    'localhost'
+    'localhost',
+    '127.0.0.1'
 ]
 
 # Application definition
@@ -144,3 +145,8 @@ STATICFILES_STORAGE = (
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email backend for development and debugging
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
