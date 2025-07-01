@@ -64,6 +64,8 @@ The live link can be found here - https://hotel-booking-app-anthony-310db2860612
 
 - **Admin Panel**
   - Site admin can manage all bookings via Django admin interface.
+  - Filter user bookings using email and full name given.
+  - Edit (add special requests) or delete user bookings (with confirmation before final deletion).
 
 ![Admin Panel Bookings Management](assets/images/bella_admin_bookings.png)
 
