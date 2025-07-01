@@ -226,6 +226,12 @@ The live application can be accessed at:
 
 ---
 
+## Entity Relationship Diagram (ERD)
+
+The following ERD represents the relationship between users and their bookings in the Bella Vista hotel app:
+
+![ERD Diagram](assets/images/erd_diagram.png)
+
 ## Credits
 
 - **Code Institute** – For the project structure, guidance, and deployment walkthroughs.
