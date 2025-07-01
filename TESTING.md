@@ -167,6 +167,25 @@ The system is stable, secure, and ready for final deployment.
 | Password reset submission (bug)           | ❌ FAIL     | Submission returns 500 error (known issue)               |
 | Responsive layout (desktop/mobile/tablet) | OK         | Tested using Responsively and confirmed with screenshots |
 
+## 14. Validator Testing Screenshots
+
+All templates were tested using the [W3C Markup Validation Service](https://validator.w3.org/).  
+Pages were tested via **URI** or **Direct Input**, depending on login requirements.
+
+| **Page**               | **Validation Method** | **Screenshot** |
+|------------------------|------------------------|----------------|
+| Homepage               | URI                    | ![Homepage HTML Validation](assets/images/validator_homepage.png) |
+| Login Page             | Direct Input           | ![Login HTML Validation](assets/images/validator_login.png) |
+| Signup Page            | Direct Input           | ![Signup HTML Validation](assets/images/validator_signup.png) |
+| Booking Page           | Direct Input           | ![Booking HTML Validation](assets/images/validator_booking.png) |
+| My Bookings Page       | Direct Input           | ![My Bookings HTML Validation](assets/images/validator_mybookings.png) |
+| Edit Booking Page      | Direct Input           | ![Edit Booking HTML Validation](assets/images/validator_edit.png) |
+| Delete Booking Page    | Direct Input           | ![Delete Booking HTML Validation](assets/images/validator_delete.png) |
+| Success Page           | Direct Input           | ![Success HTML Validation](assets/images/validator_success.png) |
+
+All pages passed validation without errors or warnings.
+
+
 
 
 **Ready for deployment.**
