@@ -23,7 +23,7 @@ SECRET_KEY = (
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'hotel-booking-app-anthony-310db2860612.herokuapp.com',
@@ -130,9 +130,9 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_LOGIN_METHODS = 'username'
+ACCOUNT_LOGIN_METHODS = {'username'}
 ACCOUNT_SIGNUP_FIELDS = [
-    'email', 'username', 'password1', 'password2'
+    'email*', 'username*', 'password1*', 'password2*'
 ]
 
 # Static files
