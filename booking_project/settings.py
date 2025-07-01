@@ -132,7 +132,7 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_LOGIN_METHODS = 'username'
 ACCOUNT_SIGNUP_FIELDS = [
-    'email*', 'username*', 'password1*', 'password2*'
+    'email', 'username', 'password1', 'password2'
 ]
 
 # Static files
