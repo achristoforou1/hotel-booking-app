@@ -154,6 +154,23 @@ Test outcomes and step-by-step logs are documented in [TESTING.md](TESTING.md), 
   All Python code passed validation using [pep8ci.herokuapp.com](https://pep8ci.herokuapp.com/).  
   String length, indentation, and whitespace issues were corrected using `black` and manual adjustments.
 
+## Lighthouse Performance Report
+
+The [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) tool was used to evaluate the live site's performance, accessibility, best practices, and SEO.
+
+The results were excellent across all key categories:
+
+| Metric           | Score |
+|------------------|-------|
+| Performance      | 98    |
+| Accessibility    | 100   |
+| Best Practices   | 93    |
+| SEO              | 90    |
+
+![Lighthouse Audit](assets/images/lighthouse_report.png)
+
+These scores confirm that the app is highly optimized for speed, accessibility, and best web development practices across devices.
+
 
 ---
 
