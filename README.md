@@ -91,14 +91,10 @@ This model is used across views to create, display, update, and delete bookings 
 ### Features Left to Implement
 
 - Confirmation email on successful booking.
-- Calendar date picker for improved UX on mobile.
 - Room availability checker to prevent double booking.
-- Custom styling for Django Allauth default page ( password reset).
+- The password reset page now uses a custom template consistent with the rest of the site, although submission still returns a server error (500).
 
-  The current implementation uses the default Allauth template for password reset, which lacks styling consistency with the rest of the site. This is a known limitation and scheduled for improvement. 
-  While authentication is functional and secure, the current password reset page currently falls back to Django Allauth’s default styling. Custom template will be added in future updates to ensure full visual consistency across the site.
-
-  ![Default Allauth Password Reset](assets/images/bella_password_reset.png)
+  ![Password Reset](assets/images/bella_password_reset.png)
 
 
 ---
