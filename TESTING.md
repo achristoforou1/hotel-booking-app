@@ -185,7 +185,9 @@ Pages were tested via **URI** or **Direct Input**, depending on login requiremen
 
 All pages passed validation without errors or warnings.
 
+### PEP8 Python Linting
 
-
+All Python files (`views.py`, `forms.py`, `models.py`, `admin.py`, `tests.py`, `apps.py`, and `settings.py`) were tested using [pep8ci.herokuapp.com](https://pep8ci.herokuapp.com/).  
+Minor issues like trailing whitespace and long lines were corrected manually or using `black`. No outstanding issues remain.
 
 **Ready for deployment.**
