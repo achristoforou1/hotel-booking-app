@@ -37,7 +37,7 @@ The live link can be found here - https://hotel-booking-app-anthony-310db2860612
 ![User Authentication](assets/images/bella_user_authentication.png)
 
 - **Booking Form**
-  - Users can book a room with details like name, check-in/check-out dates, and room type.
+  - Users can book a room with details like name, check-in/check-out dates, room type and a text box for special requests(crib etc).
   - The form includes date validation (e.g. check-in cannot be after check-out).
 
 ![Booking Form](assets/images/bella_book_a_room.png)
